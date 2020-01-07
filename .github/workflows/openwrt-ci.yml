@@ -149,7 +149,6 @@ jobs:
           
           # 我的插件：
           cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-ssr-plus-jo=y
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-accesscontrol is not set
           CONFIG_PACKAGE_luci-app-adblock=y
