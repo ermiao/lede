@@ -153,7 +153,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-adblock=y
           CONFIG_PACKAGE_luci-app-arpbind=y
           CONFIG_PACKAGE_luci-app-autoreboot=y
-          CONFIG_PACKAGE_luci-app-attendedsysupgrade=y
           CONFIG_PACKAGE_luci-app-commands=y
           CONFIG_PACKAGE_luci-app-ddns=y
           CONFIG_PACKAGE_luci-app-docker=y
