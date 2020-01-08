@@ -26,12 +26,12 @@ jobs:
 
     steps:
 
-      - name: Checkout
+      - name: 看一下
         uses: actions/checkout@master
         with:
           ref: master
 
-      - name: Space cleanup
+      - name: 空间清理
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
@@ -43,7 +43,7 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
           
-      - name: 增加主题
+      - name: 补充安装
         run: |
           cd package
           mkdir openwrt-packages
@@ -51,6 +51,7 @@ jobs:
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/jerrykuku/luci-theme-argon.git
           git clone https://github.com/Leo-Jo/luci-app-ssr-plus-jo.git
+          git clone https://github.com/vernesong/OpenClash.git
 
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
@@ -62,12 +63,12 @@ jobs:
 
           df -h
 
-      - name: Update feeds
+      - name: 更新
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Generate configuration file
+      - name: 生成配置文件
         run: |
           rm -f ./.config*
           touch ./.config
@@ -232,13 +233,13 @@ jobs:
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
 
-      - name: Make download
+      - name: 下载
         run: |
           make download -j8
           find ./dl/ -size -1024c -exec rm -f {} \;
           df -h
 
-      - name: Compile firmware
+      - name: 编译固件
         run: |
           make -j$(nproc) || make -j1 V=s
           echo "======================="
@@ -250,10 +251,10 @@ jobs:
           du -h --max-depth=1 ./build_dir
           du -h --max-depth=1 ./bin
 
-      - name: Prepare artifact
+      - name: 准备
         run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
-      - name: Upload artifact
+      - name: 上传
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt firmware
