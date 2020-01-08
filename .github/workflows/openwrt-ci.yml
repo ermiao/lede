@@ -175,6 +175,11 @@ jobs:
           CONFIG_PACKAGE_luci-app-zerotier=y
           CONFIG_PACKAGE_luci-app-xlnetacc=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_Shadowsocks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_ShadowsocksR_Server=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_ShadowsocksR_Socks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_V2ray=y
           EOF
           
           # 常用LuCI插件选择:
