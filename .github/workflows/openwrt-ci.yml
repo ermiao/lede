@@ -50,7 +50,7 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/jerrykuku/luci-theme-argon.git
-          git clone https://github.com/Leo-Jo/luci-app-ssr-plus-jo.git
+          git clone https://github.com/Lienol/openwrt-package.git
           git clone https://github.com/vernesong/OpenClash.git
 
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
