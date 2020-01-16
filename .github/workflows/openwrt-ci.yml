@@ -177,7 +177,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-zerotier=y
           CONFIG_PACKAGE_luci-app-xlnetacc=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
-          CONFIG_PACKAGE_OpenClash=y
+          CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_openwrt-package=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
           EOF
