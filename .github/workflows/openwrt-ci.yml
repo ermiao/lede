@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: EMU固件20200130
+name: EMU固件20200204
 
 on:
   push:
