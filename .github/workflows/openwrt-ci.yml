@@ -5,9 +5,9 @@
 # Copyright (C) 2019 KFERMercer <KFER.Mercer@gmail.com>
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
-#
 
-name: EMU固件20200204
+
+name: EMU固件20200709
 
 on:
   push:
